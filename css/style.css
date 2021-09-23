@@ -129,7 +129,7 @@ h4{
 
 .bottom-bar-left,
 .bottom-bar-right{
-    width: 200px;
+    width: 20%;
 }
 
 
@@ -152,49 +152,78 @@ h4{
 
 
 .bottom-bar-center{
-    width: 500px;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    height: 75%;
+    transform: translate(0px, 10px);
 }
+
+
 
 
 .player-btn{
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    width: 50%;
+    font-size: 25px;
 }
 
 .player-time-line-conteiner{
     width: 100%;
     display: flex;
     justify-content: space-around;
-}
-
-.player-time-start,
-.player-time-end{
-    width: 10%;
+    align-items: center;
 }
 
 .player-time-line{
-    width: 70%;
     height: 4px;
     background-color: #5a5a5a;
-    transform: translateY(7px);
 }
 
-.time-progress{
-    width: 20%;
+.time-line-grey{
+    width: 80%;
+}
+
+.time-line-red{
     height: 4px;
     background-color: #ff0000;
+}
+
+.player-time-line-progress,.time-line-red{
+    width: 20%;
+}
+
+/*********************************
+bottom bar right
+**********************************/
+
+.bottom-bar-right{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bottom-bar-right-icon-conteiner i{
+    display: inline-block;
+}
+
+
+.player-time-line-progress,.volume-level{
+    width: 50%;
+}
+
+.player-time-line-progress,.volume-level-bar{
+    width: 20%;
 }
 
 /*********************************
 media query
 ************************************/
 
-@media screen and (min-width:420px){
+@media screen and (min-width:553px){
 
     .side-bar{
         width: 230px;
