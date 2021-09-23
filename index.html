@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500;600&display=swap" rel="stylesheet">
     <title>spotify</title>
 </head>
 <body>
@@ -17,56 +20,50 @@
 
             <!-- top -->
             <ul class="side-bar-top">
-                <li>
-                    <div class="side-bar-top-icon">
-                        <a href="#">
-                            <img src="img/logo-small.svg" alt="logo small">
-                        </a>
-                    </div>
+                <li class="logo-conteiner">
+                    <a href="#">
+                        <img class="logo-small side-bar-ico" src="img/logo-small.svg" alt="">
+                        <img class="logo-big" src="img/logo.svg" alt="">
+                    </a>
                 </li>
                 <li>
-                    <div class="side-bar-top-icon">
-                        <a href="#">
-                            <img src="img/home.svg" alt="home">
-                        </a>
-                    </div>
+                    <a href="#">
+                        <img class="side-bar-ico" src="img/home.svg" alt="">
+                        <span class="side-bar-text-link">Home</span>
+                    </a>
                 </li>
                 <li>
-                    <div class="side-bar-top-icon">
-                        <a href="#">
-                            <img src="img/search.svg" alt="search">
-                        </a>
-                    </div>
+                    <a href="#"><img class="side-bar-ico" src="img/search.svg" alt="">
+                        <span class="side-bar-text-link">Cerca</span>
+                    </a>
                 </li>
                 <li>
-                    <div class="side-bar-top-icon">
-                        <a href="#">
-                            <img src="img/libreria.svg" alt="libreria">
-                        </a>
-                    </div>
+                    <a href="#"><img class="side-bar-ico" src="img/libreria.svg" alt="">
+                        <span class="side-bar-text-link">La tua libreria</span>
+                    </a>
                 </li>
             </ul>
             <!-- middle -->
             <div class="side-bar-middle">
-
+                
             </div>
             <!-- bottom -->
             <ul class="side-bar-bottom">
                 <li>
-                    <div class="side-bar-bottom-icon">
-                        <a href="#">
-                            <img src="img/download.svg" alt="download ico">
-                        </a>
-                    </div>
+                    <a href="#"><img class="side-bar-ico" src="img/download.svg" alt="">
+                        <span class="side-bar-text-link">Installa app</span>
+                    </a>
                 </li>
                 <li>
-                    <div class="side-bar-bottom-icon">
-                        <a href="#">
-                            <img src="img/profile.svg" alt="user ico">
-                        </a>
-                    </div>
+                    <a href="#">
+                    <div class="user-conteinrer">
+                            <img class="side-bar-ico" src="img/profile.svg" alt="">
+                        </div>
+                        <span class="side-bar-text-link user-name"> <strong> John Doe</strong></span>
+                    </a>
+
                 </li>
-            </ul>
+            </ul> 
         </div>
         <!-- main conteiner -->
         <div class="main-content">
