@@ -24,7 +24,8 @@ h1{
 
 
 h3{ 
-    font-size: 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 
@@ -42,6 +43,10 @@ h4{
 
 .logo-big{
     display: none;
+}
+
+.logo-conteiner{
+    padding-bottom: 15px;
 }
 
 .side-bar{
@@ -75,20 +80,47 @@ h4{
     display: none;
 }
 
-
-.side-bar-middle{
-    flex-grow: 1;   
-}
-
-.logo-conteiner{
-    padding-bottom: 15px;
-}
-
 .side-bar-ico{
     height: 30px;
     width: 30px;
     vertical-align: middle;
 }
+/*********************
+side-bar-middle
+*********************/
+.side-bar-middle{
+    flex-grow: 1;
+    padding: 10px;
+}
+
+.square{
+    height: 37px;
+    width: 37px;
+    background-color: #a3a3a3;
+    text-align: center;
+    color: black;
+    display: inline-block;
+    line-height: 37px;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+
+
+.Playlist-list{
+    overflow: auto;
+    font-size: 14px;
+    line-height: 35px;
+}
+
+.Playlist-list li{
+    overflow: auto;
+}
+.Playlist-conteiner{
+    overflow: auto;
+
+}
+
 
 .user-conteinrer{
     background-color: #808080;
@@ -151,7 +183,7 @@ main content
 .bottom-bar-left,
 .bottom-bar-center,
 .bottom-bar-right{
-    background-color: aqua;
+    background-color: blue;
 }
 
 
@@ -258,7 +290,6 @@ media query
     .side-bar{
         width: 230px;
         height: calc(100vh - 90px);
-        background-color: green;
     }
 
     .logo-small{
