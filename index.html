@@ -51,17 +51,25 @@
                         <div class="square">+</div>
                         <span>Crea playlist</span>
 
-                            <ul class="Playlist-list">
-                                <li>Nome Playlist</li>
-                                <li>Nome Playlist</li>
-                                <li>Nome Playlist</li>
-                                <li>Nome Playlist</li>
-                                
-                            </ul>
-
+                        
                     </div>
-
+                    
                 </div>
+                <ul class="Playlist-list conteiner-hide">
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    
+                </ul>
             </div>
             <!-- bottom -->
             <ul class="side-bar-bottom">
@@ -88,40 +96,59 @@
                 <div class="banner text-small">EFFETTUA L'UPDATE</div>
             </div>
 
-            <div class="album-category"></div>
+            <div class="album-category">
+                <ul>
+                    <li><a href="#">in evidenza </a></li>
+                    <li><a href="#">podcast </a></li>
+                    <li><a href="#">classifiche </a></li>
+                    <li><a href="#">generi e mood </a></li>
+                    <li><a href="#">nuove uscite </a></li>
+                    <li><a href="#">scopri </a></li>
+                </ul>
+            </div>
 
 
             <div class="album-section-conteiner">
+
+                
                 <!-- sectioin 1 album -->
                 <section class="section-album">
                     <h2></h2>
                     <div class="albums">
-                        <!-- album 1 -->
-                        <div class="album">
-                            <div class="img-conteiner">
-                                <img src="" alt="">
-                            </div>
-                            <h3></h3>
-                            <span></span>
+                        <div class="album-card">
+                            <img src="img/stranger.jpeg" alt="">
+                            <h3>titolo brano</h3>
+                            <span>titolo 2</span>
                         </div>
-
-                        <!-- album 2 -->
-                        <div class="album">
-                            <div class="img-conteiner">
-                                <img src="" alt="">
-                            </div>
-                            <h3></h3>
-                            <span></span>
+                        <div class="album-card">
+                            <img src="img/stranger.jpeg" alt="">
+                            <h3>titolo brano</h3>
+                            <span>titolo 2</span>
                         </div>
-
-                        <!-- album 3 -->
-                        <div class="album">
-                            <div class="img-conteiner">
-                                <img src="" alt="">
-                            </div>
-                            <h3></h3>
-                            <span></span>
+                        <div class="album-card">
+                            <img src="img/stranger.jpeg" alt="">
+                            <h3>titolo brano</h3>
+                            <span>titolo 2</span>
                         </div>
+                        <div class="album-card">
+                            <img src="img/stranger.jpeg" alt="">
+                            <h3>titolo brano</h3>
+                            <span>titolo 2</span>
+                        </div>
+                        <div class="album-card">
+                            <img src="img/stranger.jpeg" alt="">
+                            <h3>titolo brano</h3>
+                            <span>titolo 2</span>
+                        </div>
+                        <div class="album-card">
+                            <img src="img/stranger.jpeg" alt="">
+                            <h3>titolo brano</h3>
+                            <span>titolo 2</span>
+                        </div>
+                        
+                        
+                            
+                       
 
 
                     </div>
@@ -135,55 +162,49 @@
     <div class="bottom-bar">
         <!-- bottom bar left  -->
         <div class="bottom-bar-left">
-            <div class="album-miniature-player">
-                <img src="img/sinister.jpeg" alt="preview">
+            <div class="brano-preview">
+                <img src="img/sinister.jpeg" alt="">
             </div>
-            <div>
+            <div class="name-brano">
                 <h3>Sinister</h3>
                 <h4>Brano Nome</h4>
             </div>
-            <div class="bottom-bar-left-icon">
-                <i class="far fa-heart"></i><i class="far fa-folder"></i>
+            <div class="bottom-bar-left-icons">
+                <i class="far fa-heart"></i>
+                <i class="far fa-folder"></i>
             </div>
         </div>
-
         <!-- bottom bar center  -->
         <div class="bottom-bar-center">
-            <div class="player-btn">
-                
+            <div class="control-player">
                 <i class="fas fa-random"></i>
                 <i class="fas fa-step-backward"></i>
                 <i class="far fa-play-circle"></i>
                 <i class="fas fa-fast-forward"></i>
                 <i class="fas fa-redo-alt"></i>
-
             </div>
-            <div class="player-time-line-conteiner">
-
-                <div class="player-time-start">0:25</div>
-                <div class="player-time-line time-line-grey">
-                    <div class="player-time-line-progress time-line-red">
-
-                    </div>
+            <div class="player-time-line">
+                <span class="time-counter"> 0:25 </span>
+                <div class="time-line">
+                    <div class="progress"></div>
                 </div>
-                <div class="player-time-end">4:35</div>
+                <span class="time-counter">4:25</span>
 
             </div>
         </div>
 
         <!-- bottom bar right -->
         <div class="bottom-bar-right">
-            <div class="bottom-bar-right-icon-conteiner">
+            <div class="bottom-bar-right-icon">
                 <i class="fas fa-list"></i>
                 <i class="fas fa-desktop"></i>
                 <i class="fas fa-volume-up"></i>
             </div>
-            <div class="player-time-line time-line-grey volume-level">
-                <div class="player-time-line-progress time-line-red volume-level-bar">
-
+            <div class="volume-bar">
+                <div class="volume-level">
+                    <div class="progress"></div>
                 </div>
             </div>
-
         </div>
     </div>
     

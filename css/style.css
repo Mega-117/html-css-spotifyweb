@@ -25,7 +25,6 @@ h1{
 
 h3{ 
     font-size: 14px;
-    margin-bottom: 5px;
 }
 
 
@@ -52,7 +51,7 @@ h4{
 .side-bar{
     width: 50px;
     height: calc(100vh - 90px);
-    background-color: green;
+    background-color: #000000;
     display: flex;
     flex-direction: column;
 }
@@ -88,9 +87,15 @@ h4{
 /*********************
 side-bar-middle
 *********************/
+
+.conteiner-hide{
+    display: none;
+}
+
 .side-bar-middle{
     flex-grow: 1;
     padding: 10px;
+    overflow: hidden;
 }
 
 .square{
@@ -111,6 +116,8 @@ side-bar-middle
     overflow: auto;
     font-size: 14px;
     line-height: 35px;
+    height: 100%;
+    width: 100%;
 }
 
 .Playlist-list li{
@@ -147,12 +154,12 @@ main content
 .main-content{
     width: calc(100vw - 50px);
     height: calc(100vh - 90px);
-    background-color: grey;
+    background-color: #141922;
 }
 
 .top-banner{
     height: 90px;
-    background-color: blueviolet;
+    background-color: #080b12;
 }
 
 .banner{
@@ -162,123 +169,147 @@ main content
     position: absolute;
     top: 20px;
     right: 5px;
+    
 
 }
 
 .album-category{
+    margin: 20px 0;
+}
+
+.album-category ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.album-category ul li{
+    list-style-type: none;
+}
+.album-category ul li a{
+    padding:5px 10px;
+    line-height: 30px;
+    text-decoration: none;
+    color: white;
+    text-transform:uppercase;
+}
+
+/* sezione album */
+ .albums{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.album-card{
+    width: calc(100% / 2);
+    padding: 10px;
+    min-height: 100px;
+    border: 1px solid blue;
+    text-align: center;
 
 }
 
+.album-card img{
+    width: 100%;
+}
 
 
 /* bottom bar */
 .bottom-bar{
     width: 100%;
     height: 90px;
-    background-color: orange;
-    display: flex;
-    justify-content: space-between;
-}
-
-.bottom-bar-left,
-.bottom-bar-center,
-.bottom-bar-right{
-    background-color: blue;
-}
-
-
-.bottom-bar-left,
-.bottom-bar-right{
-    width: 20%;
-}
-
-
-.bottom-bar-left{
+    background-color: #282828;
     display: flex;
     align-items: center;
 }
 
-.bottom-bar-left>div{
-    padding: 0 5px;
+/* bottom-bar-left */
+
+.bottom-bar-left{
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.brano-preview,
+.name-brano,
+.bottom-bar-left-icons>i{
+    padding: 5px;
+}
+
+.brano-preview img{
+    height: 28px;
+    width: 28px;
 }
 
 
 
-.album-miniature-player img{
-    height: 30px;
-    width: 30px;
-}
-
-.bottom-bar-left-icon i:nth-of-type(1){
-    margin-right: 10px;
-}
-
-/* bottom bar center */
-
-
+/* bottom-bar-center */
 .bottom-bar-center{
-    width: 60%;
-    height: 75%;
-}
-
-
-
-
-.player-btn{
-    font-size: 25px;
+    flex-grow: 1;
+    font-size: 20px;
     text-align: center;
 }
 
-.player-time-line-conteiner{
-    width: 100%;
-    display: flex;
-    align-items: center;
+.control-player i{
+    padding:  5px;
 }
 
 .player-time-line{
+    display: flex;
+    align-items: center;
+}
+.time-counter{
+    font-size: 12px;
+    padding: 0 8px;
+}
+
+.time-line{
     height: 4px;
+    flex-grow: 1;
     background-color: #5a5a5a;
+    border-radius: 20px;
 }
 
-.player-time-end,
-.player-time-start{
-    padding: 0 5px;
-}
 
-.time-line-grey{
-    width: 80%;
-}
-
-.time-line-red{
-    height: 4px;
-    background-color: #ff0000;
-}
-
-.player-time-line-progress,.time-line-red{
+.progress{
     width: 20%;
+    height: 4px;
+    flex-grow: 1;
+    border-radius: 20px;
+    background-color: #c1c1c1;
 }
 
-/*********************************
-bottom bar right
-**********************************/
-
+/* bottom-bar-right */
 .bottom-bar-right{
     display: flex;
     align-items: center;
     font-size: 14px;
+    padding-right: 5px;
+
+}
+.bottom-bar-right-icon i{
+    padding: 2px;
 }
 
-.bottom-bar-right-icon-conteiner i{
-    display: inline-block;
+
+.volume-bar{
+    padding-left: 4px;
+}
+
+.volume-level{
+    height: 4px;
+    width: 50px;
+    background-color: #5a5a5a;
+    border-radius: 20px;
 }
 
 
-.player-time-line-progress,.volume-level{
-    width: 50%;
-}
-
-.player-time-line-progress,.volume-level-bar{
+.progress{
     width: 20%;
+    height: 4px;
+    background-color: #c1c1c1;
+    border-radius: 20px;
 }
 
 /*********************************
@@ -306,5 +337,8 @@ media query
     .side-bar-bottom li:nth-of-type(1){
         border-bottom: 1px solid;
         margin-bottom: 5px;
+    }
+    .conteiner-hide{
+        display: inline-block;
     }
 }
