@@ -14,6 +14,10 @@ body{
     color: white;
 }
 
+.text-grey{
+    color: #717171
+}
+
 h1{
     font-size: 20px;
 }
@@ -34,6 +38,11 @@ h4{
 
 /**************************/
 
+a:hover a{
+    color: white;
+}
+
+
 .main-conteiner{
     width: 100%;
     display: flex;
@@ -46,6 +55,7 @@ h4{
 
 .logo-conteiner{
     padding-bottom: 15px;
+    padding-right: 25px;
 }
 
 .side-bar{
@@ -54,17 +64,40 @@ h4{
     background-color: #000000;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    font-size: 16px;
 }
+
+.side-bar-top{
+    position: relative;
+    margin-top:  10px;
+}
+
 .side-bar-bottom,
 .side-bar-top{
     padding: 10px;
     flex-shrink: 0;
     font-size: 12px;
+    list-style: none;
+    font-size: 14px;
 }
 
-.side-bar-bottom li,
 .side-bar-top li{
+    margin-bottom: 15px;    
+}
+.side-bar-bottom li{
     margin-bottom: 5px;
+}
+
+
+
+.side-bar-top li:nth-of-type(2)::after{
+    content: "";
+    height: 35px;
+    width: 3px;
+    background-color: #adff2f;
+    position: absolute;
+    left: -10px;
 }
 
 
@@ -84,19 +117,27 @@ h4{
     width: 30px;
     vertical-align: middle;
 }
+
+.side-bar-bottom li:nth-of-type(1){
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+}
 /*********************
 side-bar-middle
 *********************/
 
 .conteiner-hide{
-    display: none;
+    display: flex;
+    flex-grow: 1;
 }
 
 .side-bar-middle{
+    display: flex;
     flex-grow: 1;
     padding: 10px;
     overflow: hidden;
 }
+
 
 .square{
     height: 37px;
@@ -106,8 +147,9 @@ side-bar-middle
     color: black;
     display: inline-block;
     line-height: 37px;
-    font-size: 25px;
+    font-size: 30px;
     vertical-align: middle;
+    margin-right: 5px;
 }
 
 
@@ -116,7 +158,7 @@ side-bar-middle
     overflow: auto;
     font-size: 14px;
     line-height: 35px;
-    height: 100%;
+    height: 75%;
     width: 100%;
 }
 
@@ -125,6 +167,7 @@ side-bar-middle
 }
 .Playlist-conteiner{
     overflow: auto;
+    padding: 15px 0;
 
 }
 
@@ -155,11 +198,13 @@ main content
     width: calc(100vw - 50px);
     height: calc(100vh - 90px);
     background-color: #141922;
+    overflow: auto;
 }
 
 .top-banner{
     height: 90px;
     background-color: #080b12;
+    position: relative;
 }
 
 .banner{
@@ -169,12 +214,13 @@ main content
     position: absolute;
     top: 20px;
     right: 5px;
+    text-align: center;
     
 
 }
 
 .album-category{
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .album-category ul{
@@ -183,36 +229,89 @@ main content
     justify-content: center;
 }
 
+.album-category ul li:first-child a::after{
+    content: "";
+    height: 3px;
+    width: 40px;
+    background-color: #adff2f;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .album-category ul li{
     list-style-type: none;
+    height: 65px;
+    line-height: 65px;
+    position: relative;
 }
 .album-category ul li a{
-    padding:5px 10px;
+    padding: 18px 10px;
     line-height: 30px;
     text-decoration: none;
     color: white;
     text-transform:uppercase;
+        color: #7d7f84;
+    font-weight: bold;
 }
 
 /* sezione album */
+
+.section-album{
+    padding: 0px 20px;
+}
+
+.section-album-title-conteiner{
+    padding: 30px 0 15px;
+}
+
+
+.section-album-title{
+    padding: 0 7px 10px;
+}
+
+.section-subtitle{
+    padding: 0 7px;
+    color: #7c7e83;
+    font-size: 15px;
+}
+
  .albums{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+}
+
+.circle-conteiner{
+    border-radius: 50%;
+    overflow: hidden;
 }
 .album-card{
     width: calc(100% / 2);
-    padding: 10px;
+    padding: 15px 7px;
     min-height: 100px;
-    border: 1px solid blue;
     text-align: center;
 
+}
+
+.img-conteiner img{
+    width: 100%;
+    display: block;
 }
 
 .album-card img{
     width: 100%;
 }
 
+.album-title{
+    padding: 20px 0 10px;
+}
+
+.album-subtitle{
+    font-size: 12px;
+    font-weight: bold;
+    color: #7d7f84;
+}
 
 /* bottom bar */
 .bottom-bar{
@@ -229,6 +328,7 @@ main content
     font-size: 14px;
     display: flex;
     align-items: center;
+    padding-left: 5px;
 }
 
 .brano-preview,
@@ -285,7 +385,7 @@ main content
     display: flex;
     align-items: center;
     font-size: 14px;
-    padding-right: 5px;
+    padding-right: 10px;
 
 }
 .bottom-bar-right-icon i{
@@ -340,5 +440,21 @@ media query
     }
     .conteiner-hide{
         display: inline-block;
+    }
+    .side-bar{
+    padding-left: 10px;
+}
+
+@media screen and (min-width:879px){
+
+    .album-card{
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (min-width:1440px){
+
+    .album-card{
+        width: calc(100% / 6);
     }
 }
